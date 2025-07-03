@@ -8,7 +8,7 @@ When preparing the artifact we used:
     * memory: 16 GB
     * disk: 256 GB
 
-Running a complete experiment in each of the evaluation takes multiple days and requires huge resources. 
+Running a complete experiment in each evaluation takes multiple days and requires huge resources. 
 We included instructions for a scaled-down evaluation for each experiment table, which takes several minutes
 
 ## Installation and Usage
@@ -41,7 +41,7 @@ To run the evaluation, run the `main.py` file with the following arguments:
   * `2` for the FDR setup (Table 2 in the paper)
   * `3` for the ADR setup (Table 3 in the paper)
 
-For example, to run the evaluation for the benchmark `m164` with the UNR setup, run **warning - this can take few seconds**:
+For example, to run the evaluation for the benchmark `m164` with the UNR setup, run:
 
 ```shell
 python main.py -B m164 -T 1
