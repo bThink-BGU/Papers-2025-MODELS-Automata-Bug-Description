@@ -23,6 +23,7 @@ else:
     benchmarks = [args.benchmark]
 
 with warnings.catch_warnings():
+    warnings.simplefilter("ignore")
     results_list = []
     for benchmark in benchmarks:
         # print("*****************", benchmark, "*****************")

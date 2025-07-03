@@ -26,7 +26,7 @@ class RPNILearner:
             elif label[-1] != "?":
                 data.append((word, label[-1] == "+"))
             labels.append(label)
-        hypothesis = run_RPNI(data, automaton_type="dfa")
+        hypothesis = run_RPNI(data, automaton_type="dfa",print_info=False)
         # make_input_complete(hypothesis, 'sink_state')
         return hypothesis
 
@@ -44,7 +44,7 @@ class RPNILearner:
             if s.output == "?":
                 if all([x.state_id == s.state_id for x in s.transitions.values()]):
                     s.sink_dont_care = True
-                    print(f"Sink dont care state: {s.state_id}")
+                    # print(f"Sink dont care state: {s.state_id}")
 
         if self.description_type == "RC":
             before = 0
@@ -133,8 +133,8 @@ class RPNILearner:
                     s.output = "+"
                 if s.output == "?" and s.reach_reject and not s.reach_accept:
                     s.output = "-"
-        print("3DFA after relabeling:")
-        print(self.dfa3)
+        # print("3DFA after relabeling:")
+        # print(self.dfa3)
 
     # old version
     # def relabel_states(self):
