@@ -3,6 +3,7 @@ from main_single import main_single
 import pandas as pd
 from stopit import SignalTimeout as Timeout
 import random
+import warnings
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--benchmark', '-B', type=str, default="m164")
@@ -21,14 +22,19 @@ if args.benchmark == "all":
 else:
     benchmarks = [args.benchmark]
 
-results_list = []
-for benchmark in benchmarks:
-    print("*****************", benchmark, "*****************")
-    with Timeout(60.0*60*10) as timeout_ctx:
-        results = main_single(benchmark, args.t_type, args.method, None, None)
-    if timeout_ctx.state == timeout_ctx.TIMED_OUT:
-        results = {"benchmark": benchmark, "L* time": 0}
-    results_list.append(results)
+with warnings.catch_warnings():
+    results_list = []
+    for benchmark in benchmarks:
+        # print("*****************", benchmark, "*****************")
+        with Timeout(60.0*60*10) as timeout_ctx:
+            if args.t_type == "2" and benchmark == "m185":
+                # results in out of memory
+                results = {"benchmark": benchmark, "L* time": -1}
+            else:
+                results = main_single(benchmark, args.t_type, args.method, None, None)
+        if timeout_ctx.state == timeout_ctx.TIMED_OUT:
+            results = {"benchmark": benchmark, "L* time": 0}
+        results_list.append(results)
 
 df = pd.DataFrame(results_list)
 import os

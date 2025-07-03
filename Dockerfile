@@ -36,21 +36,113 @@ RUN javac -d Papers-2025-MODELS-Automata-Bug-Description/rers2019/IndReachabilit
 
 # compile "m24", "m45", "m54", "m55", "m76", "m95", "m135", "m158", "m159", "m164", "m172", "m181", "m183", "m185", "m201", "m22", "m27", "m41", "m106", "m131", "m132", "m167", "m173", "m182", "m189", "m196", "m199"
 
-RUN cd Papers-2025-MODELS-Automata-Bug-Description
-
-RUN cd rers2019/IndReachabilityRers2019/arithmetic/m24
+WORKDIR "Papers-2025-MODELS-Automata-Bug-Description/rers2019/IndReachabilityRers2019/arithmetic/m24"
 RUN javac m24_Reach.java
-RUN cd ../../../..
+WORKDIR "/"
 
-RUN cd rers2019/IndReachabilityRers2019/arithmetic/m45
+WORKDIR "Papers-2025-MODELS-Automata-Bug-Description/rers2019/IndReachabilityRers2019/arithmetic/m45"
 RUN javac m45_Reach.java
-RUN cd ../../../..
+WORKDIR "/"
 
-RUN cd rers2019/IndReachabilityRers2019/arithmetic/m54
+WORKDIR "Papers-2025-MODELS-Automata-Bug-Description/rers2019/IndReachabilityRers2019/arithmetic/m54"
 RUN javac m54_Reach.java
-RUN cd ../../../..
+WORKDIR "/"
 
-RUN cd ..
+WORKDIR "Papers-2025-MODELS-Automata-Bug-Description/rers2019/IndReachabilityRers2019/arithmetic/m55"
+RUN javac m55_Reach.java
+WORKDIR "/"
+
+WORKDIR "Papers-2025-MODELS-Automata-Bug-Description/rers2019/IndReachabilityRers2019/arithmetic/m76"
+RUN javac m76_Reach.java
+WORKDIR "/"
+
+WORKDIR "Papers-2025-MODELS-Automata-Bug-Description/rers2019/IndReachabilityRers2019/arithmetic/m95"
+RUN javac m95_Reach.java
+WORKDIR "/"
+
+WORKDIR "Papers-2025-MODELS-Automata-Bug-Description/rers2019/IndReachabilityRers2019/arithmetic/m135"
+RUN javac m135_Reach.java
+WORKDIR "/"
+
+WORKDIR "Papers-2025-MODELS-Automata-Bug-Description/rers2019/IndReachabilityRers2019/arithmetic/m158"
+RUN javac m158_Reach.java
+WORKDIR "/"
+
+WORKDIR "Papers-2025-MODELS-Automata-Bug-Description/rers2019/IndReachabilityRers2019/arithmetic/m159"
+RUN javac m159_Reach.java
+WORKDIR "/"
+
+WORKDIR "Papers-2025-MODELS-Automata-Bug-Description/rers2019/IndReachabilityRers2019/arithmetic/m164"
+RUN javac m164_Reach.java
+WORKDIR "/"
+
+WORKDIR "Papers-2025-MODELS-Automata-Bug-Description/rers2019/IndReachabilityRers2019/arithmetic/m172"
+RUN javac m172_Reach.java
+WORKDIR "/"
+
+WORKDIR "Papers-2025-MODELS-Automata-Bug-Description/rers2019/IndReachabilityRers2019/arithmetic/m181"
+RUN javac m181_Reach.java
+WORKDIR "/"
+
+WORKDIR "Papers-2025-MODELS-Automata-Bug-Description/rers2019/IndReachabilityRers2019/arithmetic/m183"
+RUN javac m183_Reach.java
+WORKDIR "/"
+
+WORKDIR "Papers-2025-MODELS-Automata-Bug-Description/rers2019/IndReachabilityRers2019/arithmetic/m185"
+RUN javac m185_Reach.java
+WORKDIR "/"
+
+WORKDIR "Papers-2025-MODELS-Automata-Bug-Description/rers2019/IndReachabilityRers2019/arithmetic/m201"
+RUN javac m201_Reach.java
+WORKDIR "/"
+
+WORKDIR "Papers-2025-MODELS-Automata-Bug-Description/rers2019/IndReachabilityRers2019/data-structures/m22"
+RUN javac m22_Reach.java
+WORKDIR "/"
+
+WORKDIR "Papers-2025-MODELS-Automata-Bug-Description/rers2019/IndReachabilityRers2019/data-structures/m27"
+RUN javac m27_Reach.java
+WORKDIR "/"
+
+WORKDIR "Papers-2025-MODELS-Automata-Bug-Description/rers2019/IndReachabilityRers2019/data-structures/m41"
+RUN javac m41_Reach.java
+WORKDIR "/"
+
+WORKDIR "Papers-2025-MODELS-Automata-Bug-Description/rers2019/IndReachabilityRers2019/data-structures/m106"
+RUN javac m106_Reach.java
+WORKDIR "/"
+
+WORKDIR "Papers-2025-MODELS-Automata-Bug-Description/rers2019/IndReachabilityRers2019/data-structures/m131"
+RUN javac m131_Reach.java
+WORKDIR "/"
+
+WORKDIR "Papers-2025-MODELS-Automata-Bug-Description/rers2019/IndReachabilityRers2019/data-structures/m132"
+RUN javac m132_Reach.java
+WORKDIR "/"
+
+WORKDIR "Papers-2025-MODELS-Automata-Bug-Description/rers2019/IndReachabilityRers2019/data-structures/m167"
+RUN javac m167_Reach.java
+WORKDIR "/"
+
+WORKDIR "Papers-2025-MODELS-Automata-Bug-Description/rers2019/IndReachabilityRers2019/data-structures/m173"
+RUN javac m173_Reach.java
+WORKDIR "/"
+
+WORKDIR "Papers-2025-MODELS-Automata-Bug-Description/rers2019/IndReachabilityRers2019/data-structures/m182"
+RUN javac m182_Reach.java
+WORKDIR "/"
+
+WORKDIR "Papers-2025-MODELS-Automata-Bug-Description/rers2019/IndReachabilityRers2019/data-structures/m189"
+RUN javac m189_Reach.java
+WORKDIR "/"
+
+WORKDIR "Papers-2025-MODELS-Automata-Bug-Description/rers2019/IndReachabilityRers2019/data-structures/m196"
+RUN javac m196_Reach.java
+WORKDIR "/"
+
+WORKDIR "Papers-2025-MODELS-Automata-Bug-Description/rers2019/IndReachabilityRers2019/data-structures/m199"
+RUN javac m199_Reach.java
+WORKDIR "/"
 
 # Cleanup to reduce image size
 RUN apt-get clean \

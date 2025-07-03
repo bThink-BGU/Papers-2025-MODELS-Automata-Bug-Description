@@ -60,8 +60,8 @@ def main_single(benchmark, t_type, method, description_type, early_detection):
     example = benchmark  # "m183"  # "magento", "threads_example", "coffee", "coffee_new", "api_alice", "api_bob", "peterson", "m183"
 
     dfa3, data, M, B = run(example, t_type)
-    print(len(dfa3.states))
-    print(dfa3)
+    # print(len(dfa3.states))
+    # print(dfa3)
 
     if method == "solver":
         learner = FALearner(encoder=DFA3Encoder(dfa3, description_type, early_detection),
@@ -85,9 +85,9 @@ def main_single(benchmark, t_type, method, description_type, early_detection):
                 start_time = int(time.time() * 1000) / 1000
                 dfa = learner.learn()
                 end_time = int(time.time() * 1000) / 1000
-                print(description_type)
-                print(early_detection)
-                print(dfa)
+                # print(description_type)
+                # print(early_detection)
+                # print(dfa)
                 rpni_results[(description_type, early_detection)] = (end_time - start_time, len(dfa.states))
 
     from aalpy.utils import load_automaton_from_file
@@ -106,7 +106,7 @@ def main_single(benchmark, t_type, method, description_type, early_detection):
 
     b = moore_to_dfa(dfa3, "+")
     b = minimize_dfa(b)
-    print(b)
+    # print(b)
 
     t_s = moore_to_dfa(dfa3, "+-")
     t_s = minimize_dfa(t_s)
