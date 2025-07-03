@@ -1,5 +1,7 @@
 # Automata Models for Effective Bug Description
 
+**Zenodo DOI: 10.5281/zenodo.15798675**
+
 The artifact contains all experiments presented in the paper.
 
 When preparing the artifact we used:
