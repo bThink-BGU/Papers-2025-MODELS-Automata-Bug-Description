@@ -5,10 +5,10 @@
 The artifact contains all experiments presented in the paper.
 
 When preparing the artifact we used:
-    * macOS 11.7.5 
-    * Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz
-    * memory: 16 GB
-    * disk: 256 GB
+* macOS 11.7.5 
+* Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz
+* memory: 16 GB
+* disk: 256 GB
 
 Running a complete experiment in each evaluation takes multiple days and requires huge resources. 
 We included instructions for a scaled-down evaluation for each experiment table, which takes several minutes
@@ -30,6 +30,12 @@ and then run it:
 
 ```shell
 docker run -it tomyaacov/automata-bug-description-docker
+```
+
+You might need to run the command with `sudo` if you get a permission error while running the `docker` commands. For example:
+
+```shell
+sudo docker run -it tomyaacov/automata-bug-description-docker
 ```
 
 When running the container, the current directory will be ``Papers-2025-MODELS-Automata-Bug-Description``.
@@ -82,5 +88,21 @@ for example, to run all benchmarks with the UNR setup, run:
 python main.py -B all -T 1
 ```
 The results will be saved in the `output` folder with the prefix `results_all_T1_rpni.csv`.
+
+## Tips on docker termination and resources cleanup
+
+To terminate the docker container, you can use `exit` command in the terminal where the container is running.
+
+To remove a docker container, you can use the following command:
+
+```shell
+docker rm -f <container_id>
+```
+
+To remove the docker image, you can use the following command:
+
+```shell
+docker rmi tomyaacov/automata-bug-description-docker
+```
 
 
